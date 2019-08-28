@@ -17,6 +17,7 @@
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* NativeModuleDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* NativeModuleDemoTests.m */; };
+		52C232AC2316351F00EC44E9 /* ReactNativeBiometrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 52C232AB2316351F00EC44E9 /* ReactNativeBiometrics.m */; };
 		C6AC790064C3DB0FB84AC426 /* libPods-NativeModuleDemo-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B30CA171D9C92ED30D8C34DD /* libPods-NativeModuleDemo-tvOS.a */; };
 		CE41B9372BF77F3F28871F96 /* libPods-NativeModuleDemo-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 03799779D2A355BA24E77165 /* libPods-NativeModuleDemo-tvOSTests.a */; };
 		FBB3396A8DB35C24E1BFEB4C /* libPods-NativeModuleDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E71BB4426F99433B0F473E7 /* libPods-NativeModuleDemoTests.a */; };
@@ -58,6 +59,8 @@
 		2D02E4901E0B4A5D006451C7 /* NativeModuleDemo-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NativeModuleDemo-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E71BB4426F99433B0F473E7 /* libPods-NativeModuleDemoTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NativeModuleDemoTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		312030C4980E34A9371659F5 /* Pods-NativeModuleDemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeModuleDemoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NativeModuleDemoTests/Pods-NativeModuleDemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		52C232AA2316351F00EC44E9 /* ReactNativeBiometrics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReactNativeBiometrics.h; sourceTree = "<group>"; };
+		52C232AB2316351F00EC44E9 /* ReactNativeBiometrics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReactNativeBiometrics.m; sourceTree = "<group>"; };
 		57C7B4EBB87B9D21E37A07A0 /* Pods-NativeModuleDemo-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeModuleDemo-tvOSTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NativeModuleDemo-tvOSTests/Pods-NativeModuleDemo-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C3B3DFE5A42518CB18DDE69 /* libPods-NativeModuleDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NativeModuleDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		62E78A72B8A258465CE664B8 /* Pods-NativeModuleDemo-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NativeModuleDemo-tvOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-NativeModuleDemo-tvOSTests/Pods-NativeModuleDemo-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +128,7 @@
 		13B07FAE1A68108700A75B9A /* NativeModuleDemo */ = {
 			isa = PBXGroup;
 			children = (
+				52C232A9231634C200EC44E9 /* NativeModules */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -162,6 +166,15 @@
 				7318F3089D192CB648B17F9D /* Pods-NativeModuleDemoTests.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		52C232A9231634C200EC44E9 /* NativeModules */ = {
+			isa = PBXGroup;
+			children = (
+				52C232AA2316351F00EC44E9 /* ReactNativeBiometrics.h */,
+				52C232AB2316351F00EC44E9 /* ReactNativeBiometrics.m */,
+			);
+			name = NativeModules;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -307,6 +320,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -528,6 +542,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				52C232AC2316351F00EC44E9 /* ReactNativeBiometrics.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -22,7 +22,7 @@ import {
                       text: 'Failure',
                       onPress: () =>  {
                           console.log('Failure Pressed')
-                          reject()
+                          reject(false)
                       },
                       style: 'cancel'
                     },
@@ -30,7 +30,7 @@ import {
                         text: 'Success', 
                         onPress: () => {
                             console.log('OK Pressed')
-                            resolve()
+                            resolve(true)
                         }
                     }
                 ],

@@ -14,14 +14,18 @@ import {
   View,
   Text,
   StatusBar,
-  TouchableOpacity
+  TouchableOpacity,
+  NativeModules
 } from 'react-native';
 
 import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
 
-import BiometricModule from './MockModule';
+// import BiometricModule from './MockModule';
+
+const { ReactNativeBiometrics } = NativeModules
+const BiometricModule = ReactNativeBiometrics
 
 class App extends React.Component {
 
@@ -56,12 +60,12 @@ class App extends React.Component {
   requestBiometricVerification = () => {
     BiometricModule.simplePrompt("Please scan your Fingerprint or Face").then((resolvedValue) => {
       this.setState({
-        scanResult: "Mock Success",
+        scanResult: this.state.biometricStatus + " Success",
         hasScan: true
       })
     }, (error) => {
       this.setState({
-        scanResult: "Mock Failure",
+        scanResult: this.state.biometricStatus + " Failure",
         hasScan: true
       })
     })
