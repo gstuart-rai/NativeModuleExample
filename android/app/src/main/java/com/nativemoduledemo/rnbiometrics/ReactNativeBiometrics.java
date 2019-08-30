@@ -29,7 +29,7 @@ public class ReactNativeBiometrics extends ReactContextBaseJavaModule {
 
     @ReactMethod
     public void simplePrompt(String title, Promise promise) {
-        AlertDialog alertDialog = new AlertDialog.Builder(getReactApplicationContext()).create();
+        AlertDialog alertDialog = new AlertDialog.Builder(getCurrentActivity()).create();
         alertDialog.setTitle("Native Module Mock");
         alertDialog.setMessage(title);
         alertDialog.setButton(AlertDialog.BUTTON_POSITIVE, "Test Success",
