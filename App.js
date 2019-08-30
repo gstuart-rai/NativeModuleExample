@@ -22,7 +22,10 @@ import {
   Colors,
 } from 'react-native/Libraries/NewAppScreen';
 
-import BiometricModule from './MockModule';
+// import BiometricModule from './MockModule';
+
+const { ReactNativeBiometrics } = NativeModules
+const BiometricModule = ReactNativeBiometrics
 
 // const { ReactNativeBiometrics } = NativeModules
 // const BiometricModule = ReactNativeBiometrics
